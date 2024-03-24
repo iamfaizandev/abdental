@@ -1,0 +1,30 @@
+body {
+  overflow: scroll;
+  height: 1200px;
+  overflow-x: hidden;
+  background-color: #7ab4f8;
+}
+.navbar ul li {
+  cursor: pointer;
+}
+.navbar {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  /* background-color: #7ab4f8; */
+}
+.navbar-brand {
+  margin-right: 5%;
+}
+header {
+  background-image: url(../assets/banner3.jpg);
+  height: 130vh;
+  width: 100%;
+  background-size: cover;
+}
+.header-container {
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  line-height: 3.5rem;
+}
