@@ -5,18 +5,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
+    <link rel="stylesheet" href="about.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
-<body>
+<body class="about" id="about">
+    <nav class="navbar sticky-top bg-light navbar-expand-lg ">
+        <div class="container-fluid  nav-container">
+            <a class="navbar-brand" href="../../../index.html">
+                <div class="brand_text"><span style="color:rgb(22, 13, 13)" class="h4 Aletter">A</span><span
+                        style="color: #022896;" class="h4">B</span>
+                </div>
 
-    <div id="about" class="text-center mt-4">
-        <h3>This About Page</h3>
-        <p>Client Provide Data </p>
-        <a href="../../../index.html" class="btn btn-primary">Back to Home</a>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu bg-light">
+                            <li><a class="dropdown-item" href="#">GENERAL</a></li>
+                            <li><a class="dropdown-item" href="#">COSMETIC</a></li>
+                            <li><a class="dropdown-item" href="#">SURGICAL</a></li>
+                            <li><a class="dropdown-item" href="#">PROBLEMS WE TREAT</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="src/pages/before&after/before&after.html">Before & After</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="src/pages/contact/contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                    <button class="btn  btn-dark me-2">
+                        <a href="src/pages/appointment/appointment.html" class="text-decoration-none text-white">Book
+                            Now</a>
+                    </button>
+                    <button class="btn btn-primary">
+                        <a href="telto:123" class="text-decoration-none"><i
+                                class="bi bi-telephone-forward-fill text-white"></i></a>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- aboutHeader -->
+    <div class="about_page">
+        <header>
+            <div class="header_caption">
+                <div class="header-smallText">
+                    <h1> ABOUT AB DENTAL</h1>
+                </div>
+                <div class="mainText">
+                    <h2>
+                        Building lifetime relationships through positive experiences
+                    </h2>
+                </div>
+                <div class="bookNowbtn">
+                    <button class="btn btn-dark  mt-4">Book Now</button>
+                    <div class="callNo mt-4">
+                        Or Call +91 1122334455
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- section -->
+        <section>
+            <div class="aboutPara">
+                <div class="about-content">
+                    <h1> Serving patients with <b>Animated Text</b></h1>
+                    <p>We’re a group of energetic, values-driven dental clinicians dedicated to caring for all people —
+                        young to young at heart. Since 2002, we’ve been combining exciting technology with a warm and
+                        friendly team to deliver exceptional dentistry in Greenwood Village.
+
+                        Find all the dental care you need (and then some) here in our beautiful office, designed for
+                        your comfort and rejuvenation.</p>
+                    <div class="video">
+                        <img src="../../assets/patient1.avif" alt="">
+                    </div>
+                </div>
+                <div class="about-CardImg">
+                    <div class="card">
+                        <img src="../../assets/patient2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text text-white">At AB Dental, you are in good hands. With every treatment,
+                                we
+                                promise to do it right, quickly, and for a fair price. And we provide a lifetime
+                                warranty on all our work — because it’s the right thing to do.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- doctor section -->
+        <section>
+            <div class="doctors-section">
+                <div class="doc_left">
+                    <div class="docTri">
+                        <img src="../../assets/docTringel.svg" alt="">
+                    </div>
+                    <div class="docs_abouts me-4 d-flex">
+                        <div class="doc_img">
+                            <img src="../../assets/doc1.jpg" alt="">
+                        </div>
+                        <div class="doc_about ms-4">
+                            <h2>Dr. AB ZL</h2>
+                            <h6>Why dentistry?</h6>
+                            <p>I’m a dentist because it has always been my desire to help people in a healthcare
+                                environment.
+                                Growing up in my dad’s and uncle’s dental office, I learned early on that dentistry was
+                                going to
+                                be my path. I love the relationships we build with our patients and our ability to help
+                                them
+                                live healthier, better lives.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="doc_education">
+                    <h6 class="mt-4 mb-4 fs-4">Education</h6>
+                    <ul>
+                        <li>BA in Biology and World Religions, Westminster College</li>
+                        <li>DDS, University of Oklahoma</li>
+                    </ul>
+                    <h6 class="mt-4 mb-4 fs-4">Out and about in Denver/Greenwood Village</h6>
+                    <ul>
+                        <li>Running in Wash Park</li>
+                        <li> Concerts at the Mission Ballroom and Red Rocks</li>
+                        <li>Telemark skiing at Arapahoe Basin!!!!</li>
+                        <li>Dinner at Sunday Vinyl</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </div>
+    <script src="src/script/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
