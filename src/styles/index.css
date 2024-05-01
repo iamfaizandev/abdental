@@ -13,6 +13,9 @@ body {
   padding-bottom: 0.8rem;
   /* background-color: #7ab4f8; */
 }
+.bg-white {
+  background-color: white;
+}
 .navbar-brand {
   margin-right: 5%;
 }
@@ -40,6 +43,9 @@ header {
   }
   .header-container .headerTxt {
     font-size: 3rem;
+  }
+  .bg-white {
+    background-color: black;
   }
   header {
     background-image: none;

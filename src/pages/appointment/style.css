@@ -109,6 +109,12 @@ footer {
   .form_top {
     flex-direction: column;
   }
+  .form-container .title {
+    text-align: center;
+  }
+  .sub-paragraph {
+    display: none;
+  }
   .inputWidth {
     width: 15vw;
     height: 4.5vh;
