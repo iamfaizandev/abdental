@@ -109,6 +109,10 @@ footer {
   .form_top {
     flex-direction: column;
   }
+  .inputWidth {
+    width: 15vw;
+    height: 4.5vh;
+  }
   .form-bg {
     width: 80vw;
     border-radius: 0;
