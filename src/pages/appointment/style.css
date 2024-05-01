@@ -102,6 +102,7 @@ footer {
   font-size: 1.3rem;
   color: white;
   background-color: #1d3157;
+  text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
@@ -111,7 +112,7 @@ footer {
   .form-bg {
     width: 80vw;
     border-radius: 0;
-    height: 100vh;
+    height: 140vh;
   }
   .form {
     padding: 0% 0% 0% 0%;
@@ -157,10 +158,9 @@ footer {
   footer {
     text-align: center;
     width: 100vw;
-
     font-size: 0.7rem;
     color: white;
-    background-color: #1d3157;
+    /* background-color: #1d3157; */
   }
   footer .Copyright {
     margin-bottom: 2%;
