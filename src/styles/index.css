@@ -1,6 +1,7 @@
 body {
   overflow: scroll;
-  height: 1200px;
+  height: 90vh;
+  width: 100vw;
   overflow-x: hidden;
   background-color: #7ab4f8;
 }
