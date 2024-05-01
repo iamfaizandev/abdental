@@ -120,7 +120,7 @@ footer {
   .form-bg {
     width: 80vw;
     border-radius: 0;
-    height: 110vh;
+    height: 115vh;
   }
   .form {
     padding: 0% 0% 0% 0%;
@@ -154,7 +154,7 @@ footer {
   .customizeBtn {
     display: block;
     margin: auto;
-    margin-top: 20%;
+    margin-top: 10%;
     margin-bottom: 5%;
     width: 50vw;
     height: 8vh;
