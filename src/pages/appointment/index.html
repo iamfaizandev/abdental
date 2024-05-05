@@ -41,8 +41,8 @@
     <section class="container-fluid">
         <div class="form-bg">
             <div class="form-container">
-                <h5 class="title">FILL OUT YOUR DETAILS</h5>
-                <p class="sub-paragraph">
+                <h5 class="title text-white">FILL OUT YOUR DETAILS</h5>
+                <p class="sub-paragraph text-lightWhite">
                     Now book your appointments with us in easy steps. Fill up the details and submit it. You will get a
                     confirmatory message very soon.
                 </p>
@@ -67,7 +67,7 @@
                         <!----------------- Select Time ------------------>
                         <label class="form-label" for="Time">Select Time</label>
                         <div>
-                            <select class=" inputWidth inputBorder " required aria-label="selectTime">
+                            <select id="time" class=" inputWidth inputBorder " required aria-label="selectTime">
                                 <option value="-1">Select Time</option>
                                 <option value="11:00AM">11:00 AM</option>
                                 <option value="01:00PM">01:00PM</option>
@@ -98,7 +98,7 @@
                 </div>
                 <!----------------- Fee ------------------>
                 <div class="form-footer mt-4">
-                    <div class="sub-title  text-secondary">Payment Details</div>
+                    <div class="sub-title  text-white">Payment Details</div>
                     <div>
                         <div class="fee ">Rs. 500 (Consultation Fee)</div>
                     </div>
@@ -114,8 +114,8 @@
                     </div>
                 </div>
                 <!---------------- Button ----------------->
-                <button class="customizeBtn">
-                    <div class="btnTxt">Send Message</div>
+                <button type="submit" class="customizeBtn" onclick="sendToWhatsapp()">
+                    Send Message
                 </button>
 
         </div>
@@ -128,7 +128,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
     <script src="script.js"></script>
 </body>
 
