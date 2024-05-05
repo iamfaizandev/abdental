@@ -71,7 +71,8 @@ nav ul {
 }
 .inputBorder {
   padding: 2%;
-  border: 2px solid rgb(0, 0, 0);
+  /* border: 2px solid rgb(0, 0, 0); */
+  box-shadow: 2px 1px 1px white;
 }
 .userMessage {
   width: 36vw;
@@ -139,7 +140,7 @@ footer {
   .form-bg {
     width: 80vw;
     border-radius: 0;
-    height: 115vh;
+    height: 118vh;
   }
   .form {
     padding: 0% 0% 0% 0%;
