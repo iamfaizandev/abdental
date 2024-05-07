@@ -1,0 +1,200 @@
+/* --------Header----------------- */
+header {
+  margin-bottom: 10%;
+  margin-top: 3%;
+}
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.header-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header-img {
+  margin-top: 3%;
+}
+.header-img img {
+  width: 50vw;
+  height: 65vh;
+  margin-left: 10%;
+}
+h6 span {
+  font-size: 1.1rem;
+}
+.header-text h1 {
+  font-size: 3.3rem;
+  margin-bottom: 8%;
+  color: rgb(29, 165, 219);
+}
+.header-text .main_text {
+  width: 20vw;
+  margin-left: 30%;
+}
+.header-text .sub_text {
+  width: 30vw;
+  margin-left: 30%;
+}
+/* ------------------section----------------------- */
+.main-container {
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+}
+.rightSide {
+  margin: 0;
+}
+img {
+  width: 50vw;
+  height: min-content;
+}
+.leftSide {
+  margin: auto;
+  display: block;
+  width: 70%;
+}
+.leftSide .main-text {
+  font-size: 2.5rem;
+  color: rgb(17, 110, 216);
+  margin-bottom: 5%;
+}
+.leftSide .sub-text {
+  font-size: 1.4rem;
+  margin-bottom: 7%;
+  font-weight: 400;
+}
+.twoSection {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.contact-container {
+  height: 70vh;
+  width: 100vw;
+  background-color: #f3f5f8;
+  margin-top: 5%;
+}
+.contact-contentTxt {
+  display: block;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  padding-top: 5%;
+}
+.contact-container .sub-text {
+  width: 70%;
+  text-align: center;
+  display: block;
+  margin: auto;
+  margin-top: 3%;
+}
+.contact-container .btns {
+  display: block;
+  width: 15vw;
+  margin: auto;
+  margin-top: 5%;
+}
+.contact-container .btns div {
+  margin-top: 10%;
+  text-align: center;
+}
+footer {
+  padding: 5%;
+  width: 100vw;
+  margin-top: 5%;
+  height: 5vh;
+  font-size: 1.3rem;
+  color: white;
+  background-color: #1d3157;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    margin-bottom: 7%;
+  }
+  .header-img img {
+    width: 94vw;
+    height: 65vh;
+    margin-left: 0;
+  }
+  .header-text .main_text {
+    width: 80vw;
+    margin-left: 0%;
+    margin-top: 5%;
+  }
+  .header-text h1 {
+    font-size: 2.7rem;
+    margin-bottom: 8%;
+    color: rgb(29, 165, 219);
+  }
+  h6 span {
+    font-size: 1rem;
+  }
+  .header-text .sub_text {
+    width: 80vw;
+    margin-left: 0%;
+  }
+  .oneSection .main-container {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .leftSide .main-text {
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-left: 0%;
+  }
+  .twoSection .main-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .thirdSection .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+  section img {
+    width: 100%;
+    padding: 3%;
+    height: min-content;
+  }
+  .contact-container {
+    height: 75%;
+    width: 100vw;
+    background-color: #f3f5f8;
+    margin-top: 5%;
+  }
+  .contact-contentTxt {
+    display: block;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding-top: 3%;
+  }
+  .contact-contentTxt .sub-text {
+    font-size: 1rem;
+    width: 100%;
+  }
+  .contact-container h2 {
+    font-size: 1.9rem;
+  }
+  .contact-container .btns {
+    display: block;
+    width: 55vw;
+    margin: auto;
+    margin-top: 5%;
+  }
+  footer {
+    width: 100vw;
+    margin-top: 5%;
+    height: 20vh;
+    font-size: 1rem;
+    color: white;
+    background-color: #1d3157;
+    text-align: center;
+  }
+  footer .Copyright {
+    margin-bottom: 20%;
+  }
+}

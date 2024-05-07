@@ -16,6 +16,9 @@ body {
 .bg-white {
   background-color: white;
 }
+.bg-Dark {
+  background-color: white;
+}
 .navbar-brand {
   margin-right: 5%;
 }
@@ -45,6 +48,9 @@ header {
     font-size: 3rem;
   }
   .bg-white {
+    background-color: black;
+  }
+  .bg-Dark {
     background-color: black;
   }
   header {
