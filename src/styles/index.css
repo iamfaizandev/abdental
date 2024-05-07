@@ -5,6 +5,21 @@ body {
   overflow-x: hidden;
   background-color: #7ab4f8;
 }
+.Aletter {
+  color: whitesmoke;
+}
+.Bletter {
+  color: rgb(16, 63, 118);
+}
+.title-text {
+  font-size: 2rem;
+}
+.main-text {
+  font-size: 4rem;
+  color: yellow;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
 .navbar ul li {
   cursor: pointer;
 }
@@ -68,7 +83,10 @@ header {
     display: block;
     position: absolute;
     top: 30%;
-    left: 10%;
+    left: 5%;
     line-height: 3.5rem;
+  }
+  .headerTxt {
+    width: 50%;
   }
 }
