@@ -1,0 +1,91 @@
+body {
+  overflow: scroll;
+  height: 90vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: #7ab4f8;
+}
+.Aletter {
+  color: whitesmoke;
+}
+.Bletter {
+  color: rgb(16, 63, 118);
+}
+.title-text {
+  font-size: 2rem;
+}
+.main-text {
+  font-size: 4rem;
+  color: yellow;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.navbar ul li {
+  cursor: pointer;
+}
+.navbar {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  margin-right: 3%;
+  /* background-color: #7ab4f8; */
+}
+.bg-white {
+  background-color: white;
+}
+.bg-Dark {
+  background-color: white;
+}
+.navbar-brand {
+  margin-right: 5%;
+}
+header {
+  background-image: url(./src/assets/banner2.jpg);
+  height: 130vh;
+  width: 100%;
+  background-size: cover;
+}
+.header-container {
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  line-height: 3.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    background-color: rgb(91, 134, 184);
+    opacity: 0.9;
+    margin-right: 0%;
+  }
+  .navbar ul li a {
+    color: white;
+  }
+  .header-container .headerTxt {
+    font-size: 3rem;
+  }
+  .bg-white {
+    background-color: black;
+  }
+  .bg-Dark {
+    background-color: black;
+  }
+  header {
+    background-image: none;
+    width: 100%;
+    height: 30vh;
+    background-size: cover;
+    z-index: -1;
+  }
+  body {
+    height: 60vh;
+    overflow: hidden;
+  }
+  .header-container {
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    line-height: 3.5rem;
+  }
+}
