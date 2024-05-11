@@ -36,6 +36,7 @@
 ///// Sending Appoint to Mail
 
 function sendMail() {
+  // Retrieve form field values
   var username = document.getElementById("username").value;
   var useremail = document.getElementById("useremail").value;
   var message = document.getElementById("message").value;
@@ -43,6 +44,19 @@ function sendMail() {
   var date = document.getElementById("date").value;
   var time = document.getElementById("time").value;
 
+  // Check if any of the required fields are empty
+  if (!username || !useremail || !message || !userphone || !date || !time) {
+    // Show an alert if any field is empty
+    alert("Please fill in all the required fields.");
+
+    return; // Stop further execution of the function
+  }
+
+  if (time === "-1") {
+    // Show an alert if "Select Time" is selected
+    alert("Please select a valid time.");
+    return; // Stop further execution of the function
+  }
   // Proceed with sending email
   let templateParams = {
     name: username,

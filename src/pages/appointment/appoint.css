@@ -133,31 +133,15 @@ footer {
 .hidden {
   display: none;
 }
-header {
-  display: block;
-  margin: auto;
-  width: 100vw;
-  height: 100vh;
+#inputAlert {
   position: absolute;
   z-index: +1;
-  left: 36%;
-  top: 40%;
-}
-header img {
-  width: 30%;
+  left: 38%;
+  width: 100%;
+  top: 10%;
   backdrop-filter: blur(15px);
 }
-/* #loadingText {
-  display: block;
-  width: 50%;
-  height: auto;
-  margin: auto;
-  margin-left: 43%;
-} */
-/* .waitImg {
-  width: 70px;
-  height: auto;
-} */
+
 @media only screen and (max-width: 600px) {
   .form_top {
     flex-direction: column;
