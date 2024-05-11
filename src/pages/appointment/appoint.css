@@ -108,6 +108,8 @@ nav ul {
   transition: background 0.3s;
   font-weight: bold;
   border-radius: 5%;
+  display: block;
+  margin: auto;
 }
 .customizeBtn:hover {
   background: linear-gradient(to right, #0a931f, #10aa08);
@@ -128,7 +130,34 @@ footer {
   background-color: #1d3157;
   text-align: center;
 }
-
+.hidden {
+  display: none;
+}
+header {
+  display: block;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: +1;
+  left: 36%;
+  top: 40%;
+}
+header img {
+  width: 30%;
+  backdrop-filter: blur(15px);
+}
+/* #loadingText {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin: auto;
+  margin-left: 43%;
+} */
+/* .waitImg {
+  width: 70px;
+  height: auto;
+} */
 @media only screen and (max-width: 600px) {
   .form_top {
     flex-direction: column;
