@@ -1,118 +1,126 @@
-// function sendToWhatsapp() {
-//   let name = document.getElementById("username").value.trim();
-//   let email = document.getElementById("userEmail").value.trim();
-//   let message = document.getElementById("message").value.trim();
-//   let date = document.getElementById("date").value.trim();
-//   let phoneno = document.getElementById("userphone").value.trim();
-//   let time = document.getElementById("time").value.trim();
-
-//   if (!name || !email || !message || !date || !phoneno || !time) {
-//     alert("Please fill in all the fields.");
-//     return;
-//   }
-
-//   var url =
-//     "https://wa.me/917563092029?text=" +
-//     encodeURIComponent(
-//       "Full Name: " +
-//         name +
-//         "\nDate: " +
-//         date +
-//         "\nPhoneNo: " +
-//         phoneno +
-//         "\nTime: " +
-//         time +
-//         "\nEmail: " +
-//         email +
-//         "\nMessage: " +
-//         message
-//     );
-
-//   console.log(url);
-//   window.open(url, "_blank").focus();
-// }
-
-/////////////////////////////////////////////////////////////////////////////
-///// Sending Appoint to Mail
-
+function generateReceiptId() {
+  return "RCPT-" + Math.floor(Math.random() * 1000000);
+}
 function sendMail() {
-  // Retrieve form field values
-  var username = document.getElementById("username").value;
-  var useremail = document.getElementById("useremail").value;
-  var message = document.getElementById("message").value;
-  var userphone = document.getElementById("userphone").value;
-  var date = document.getElementById("date").value;
-  var time = document.getElementById("time").value;
+  const username = document.getElementById("username").value.trim();
+  const useremail = document.getElementById("useremail").value;
+  const userphone = document.getElementById("userphone").value;
+  const date = document.getElementById("date").value;
+  const time = document.getElementById("time").value;
+  const message = document.getElementById("message").value;
+  const receiptId = generateReceiptId();
 
-  // Check if any of the required fields are empty
-  if (!username || !useremail || !message || !userphone || !date || !time) {
-    // Show an alert if any field is empty
-    alert("Please fill in all the required fields.");
+  const today = new Date().toISOString().split("T")[0];
 
-    return; // Stop further execution of the function
+  if (!username || !useremail || !userphone || time === "-1" || !date) {
+    alert("Please fill in all required fields.");
+    return;
   }
 
-  if (time === "-1") {
-    // Show an alert if "Select Time" is selected
-    alert("Please select a valid time.");
-    return; // Stop further execution of the function
+  if (date < today) {
+    alert("Please select a future date.");
+    return;
   }
-  // Proceed with sending email
-  let templateParams = {
-    name: username,
-    email: useremail,
-    message: message,
-    phonenumber: userphone,
-    date: date,
-    time: time,
-  };
+  // Populate the modal with details
+  document.getElementById("receiptId").innerText = receiptId;
+  document.getElementById("modalUserName").innerText = username;
+  document.getElementById("modalUserEmail").innerText = useremail;
+  document.getElementById("modalUserPhone").innerText = userphone;
+  document.getElementById("modalAppointDate").innerText = date;
+  document.getElementById("modalAppointTime").innerText = time;
+  document.getElementById("modalMessage").innerText = message;
 
-  console.log(templateParams);
-  const serviceID = "service_n58kwjr";
-  const templateID = "template_7tdt8mc";
+  // Display the modal
+  document.getElementById("receiptModal").style.display = "block";
 
+  // Send email using EmailJS
   emailjs
-    .send(serviceID, templateID, templateParams)
-    .then((res) => {
-      // Clear input fields after successful submission
-      document.getElementById("username").value = "";
-      document.getElementById("useremail").value = "";
-      document.getElementById("message").value = "";
-      document.getElementById("userphone").value = "";
-      document.getElementById("date").value = "";
-      document.getElementById("time").value = "";
-      alert("Email sent successfully!");
-      console.log(res);
+    .send("service_n58kwjr", "template_7tdt8mc", {
+      receiptid: receiptId,
+      name: username,
+      email: useremail,
+      message: message,
+      phonenumber: userphone,
+      date: date,
+      time: time,
     })
-    .catch((err) => console.log(err));
+    .then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
 }
 
-////////////////////////////////////////////////////////////////////////////////
-//////////////////// Pop Up Modal
-// document.addEventListener("DOMContentLoaded", function () {
-//   const modal = document.getElementById("myModal");
-//   const openModalBtn = document.getElementById("openModalBtn");
-//   const closeButton = modal.querySelector(".close");
+// Modal close button
+document.querySelector(".close").onclick = function () {
+  document.getElementById("receiptModal").style.display = "none";
+};
 
-//   // Open modal on button click
-//   openModalBtn.addEventListener("click", function () {
-//     modal.style.display = "block";
+// Print the receipt
+document.getElementById("printButton").onclick = function () {
+  const modalContent = document.querySelector(".modal-content").innerHTML;
+  const printWindow = window.open("", "", "height=600,width=800");
+  printWindow.document.write("<html><head><title>Print Receipt</title>");
+  printWindow.document.write(
+    "<style>@media print { .modal-content { display: block; } }</style>"
+  );
+  printWindow.document.write("</head><body >");
+  printWindow.document.write(modalContent);
+  printWindow.document.write("</body></html>");
+  printWindow.document.close();
+  printWindow.focus();
+  printWindow.print();
+};
 
-//     // Close modal after 2 seconds
-//     setTimeout(function () {
-//       modal.style.display = "none";
-//     }, 2000);
-//   });
+// Save as PDF (requires jsPDF library)
+document.getElementById("saveAsPdfButton").onclick = function () {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+  doc.text("Appointment Receipt", 10, 10);
+  doc.text(
+    "Receipt ID: " + document.getElementById("receiptId").innerText,
+    10,
+    20
+  );
+  doc.text(
+    "Name: " + document.getElementById("modalUserName").innerText,
+    10,
+    30
+  );
+  doc.text(
+    "Email: " + document.getElementById("modalUserEmail").innerText,
+    10,
+    40
+  );
+  doc.text(
+    "Phone: " + document.getElementById("modalUserPhone").innerText,
+    10,
+    50
+  );
+  doc.text(
+    "Appointment Date: " +
+      document.getElementById("modalAppointDate").innerText,
+    10,
+    60
+  );
+  doc.text(
+    "Appointment Time: " +
+      document.getElementById("modalAppointTime").innerText,
+    10,
+    70
+  );
+  doc.text(
+    "Message: " + document.getElementById("modalMessage").innerText,
+    10,
+    80
+  );
+  doc.save("appointment_receipt.pdf");
 
-//   // Close modal on close button click
-//   closeButton.addEventListener("click", function () {
-//     modal.style.display = "none";
-//   });
-
-//   // Close modal when clicking outside of it
-//   window.addEventListener("click", function (event) {
-//     if (event.target == modal) {
-//       modal.style.display = "none";
-//     }
-//   });
-// });
+  // Redirect to main page after saving PDF
+  setTimeout(() => {
+    window.location.href = "./appoint.html"; // Adjust URL as needed
+  }, 1000);
+};

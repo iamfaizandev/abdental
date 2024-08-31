@@ -9,26 +9,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
-            emailjs.init({
-                publicKey: "1m0-WMqEgnAlSz7BU",
-            });
+            emailjs.init("1m0-WMqEgnAlSz7BU");
         })();
     </script>
-
 </head>
 
-<body class=" appointPage-body">
-    <nav class="navbar bg-light  navbar-expand-lg ">
-        <div class="container-fluid  nav-container">
+<body class="appointPage-body">
+    <nav class="navbar bg-light navbar-expand-lg">
+        <div class="container-fluid nav-container">
             <a class="navbar-brand" href="../../../index.html">
-                <div class="brand_text"><span style="color:rgb(22, 13, 13)" class="h4 Aletter">A</span><span
-                        style="color: #022896;" class="h4">B</span>
+                <div class="brand_text">
+                    <span style="color:rgb(22, 13, 13)" class="h4 Aletter">A</span>
+                    <span style="color: #022896;" class="h4">B</span>
                 </div>
-
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -37,22 +33,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="../../pages//about/about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="../../pages/services/services.html">Our
+                        <a class="nav-link" aria-current="page" href="../../pages/services/services.html">Our
                             Services</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link " href="../../pages/before&after/before&after.html">Before & After</a>
-                    </li> -->
-
                 </ul>
                 <form class="d-flex navRight">
-                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-                    <button class="btn  btn-dark me-2">
+                    <button class="btn btn-dark me-2">
                         <a href="../../pages/appointment/appoint.html" class="text-decoration-none text-white">Book
                             Now</a>
                     </button>
@@ -67,18 +57,7 @@
     <!-- Section -->
 
     <section class="container-fluid">
-        <!-- <div class="hidden" >
-            <div class=" alert alert-danger " role="alert">
-                 <span class="bi bi-close"></span>
-            </div>
-        </div> -->
-        <div class="hidden">
-            <div id="inputAlert" class=" alert w-25 d-block m-auto   alert-warning alert-dismissible fade show"
-                role="alert">
-                <strong>Please fill in all the required fields.</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        </div>
+
         <div class="form-bg">
             <div class="form-container">
                 <h5 class="title text-white">FILL OUT YOUR DETAILS</h5>
@@ -156,23 +135,41 @@
                 </div>
                 <!---------------- Button ----------------->
                 <button id="openImg" name="submitbtn" type="button" class="customizeBtn" onclick="sendMail()">
-                    Send Message
+                    Submit
                 </button>
 
 
         </div>
 
     </section>
+    <div id="receiptModal" class="modal">
+        <div class="modal-content w-50">
+            <span class="close">&times;</span>
+            <h2>Appointment Receipt</h2>
+            <p><strong>Receipt ID:</strong> <span id="receiptId"></span></p>
+            <p><strong>Name:</strong> <span id="modalUserName"></span></p>
+            <p><strong>Email:</strong> <span id="modalUserEmail"></span></p>
+            <p><strong>Phone:</strong> <span id="modalUserPhone"></span></p>
+            <p><strong>Appointment Date:</strong> <span id="modalAppointDate"></span></p>
+            <p><strong>Appointment Time:</strong> <span id="modalAppointTime"></span></p>
+            <p><strong>Message:</strong> <span id="modalMessage"></span></p>
+            <button id="printButton" target="_blank" class="btn btn-dark mb-2 w-100">Print</button>
+            <button id="saveAsPdfButton" target="_blank" class="btn btn-dark mb-2 w-100">Save as PDF</button>
+        </div>
+    </div>
+
     <footer>
         <div class="Copyright">
             Copyright© 2024 AB Dental Care
         </div>
     </footer>
     <script src="appoint.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </body>
 
 </html>
