@@ -19,9 +19,11 @@ nav ul {
   color: white;
 }
 .appointPage-body {
-  width: fit-content;
-  height: fit-content;
+  /* width: fit-content; */
+  /* height: fit-content; */
   background: linear-gradient(180deg, #426aab 0, #3f83f8 50%, #3f83f8 0);
+}
+.section-container {
 }
 .form-bg {
   width: 40vw;
